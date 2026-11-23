@@ -1,0 +1,231 @@
+{
+  "title": "课程改版的随机增量、助教负载与联系资格",
+  "source_note": "本文件中的机构、事件、规则和数值均为人工构造的本地合成资料。",
+  "contract": "assignment 固定 cohort 和 original_class。assessment_score 的 band 在分班前确定。submission 的 attempt_at 和 received_at 分别为实际提交和接收时间。curriculum_map 记录目标跨版兼容性。capacity.agent_hours 每时段给出资质组可用工时，case_cost 给单次需工时。contact_window 只在区间内允许排电话。booking 已确认工时不可重用，status 已结案后才释放服务容量。",
+  "tables": {
+    "assignment": [
+      {
+        "student": "L1",
+        "cohort": "A",
+        "original_class": "C1",
+        "curriculum": "2026-v1"
+      },
+      {
+        "student": "L2",
+        "cohort": "A",
+        "original_class": "C1",
+        "curriculum": "2026-v1"
+      },
+      {
+        "student": "L3",
+        "cohort": "B",
+        "original_class": "C2",
+        "curriculum": "2026-v2"
+      },
+      {
+        "student": "L4",
+        "cohort": "B",
+        "original_class": "C2",
+        "curriculum": "2026-v2"
+      },
+      {
+        "student": "L5",
+        "cohort": "A",
+        "original_class": "C3",
+        "curriculum": "2026-v1"
+      }
+    ],
+    "assessment_score": [
+      {
+        "student": "L1",
+        "band": "support",
+        "assessed_at": "2026-08-01"
+      },
+      {
+        "student": "L2",
+        "band": "core",
+        "assessed_at": "2026-08-01"
+      },
+      {
+        "student": "L3",
+        "band": "support",
+        "assessed_at": "2026-08-01"
+      },
+      {
+        "student": "L4",
+        "band": "core",
+        "assessed_at": "2026-08-01"
+      },
+      {
+        "student": "L5",
+        "band": "support",
+        "assessed_at": "2026-08-01"
+      }
+    ],
+    "progress": [
+      {
+        "student": "L1",
+        "course_version": "2026-v2",
+        "offline_minutes": "340"
+      },
+      {
+        "student": "L2",
+        "course_version": "2026-v1",
+        "offline_minutes": "0"
+      },
+      {
+        "student": "L3",
+        "course_version": "2026-v2",
+        "offline_minutes": "10"
+      },
+      {
+        "student": "L4",
+        "course_version": "2026-v2",
+        "offline_minutes": "80"
+      },
+      {
+        "student": "L5",
+        "course_version": "2026-v1",
+        "offline_minutes": "0"
+      }
+    ],
+    "submission": [
+      {
+        "student": "L1",
+        "target": "project",
+        "attempt_at": "2026-08-09",
+        "received_at": "2026-08-14",
+        "grade": "pass"
+      },
+      {
+        "student": "L2",
+        "target": "project",
+        "attempt_at": "2026-08-12",
+        "received_at": "2026-08-12",
+        "grade": "pass"
+      },
+      {
+        "student": "L3",
+        "target": "old-project",
+        "attempt_at": "2026-08-10",
+        "received_at": "2026-08-10",
+        "grade": "pass"
+      },
+      {
+        "student": "L4",
+        "target": "project",
+        "attempt_at": "2026-08-11",
+        "received_at": "2026-08-11",
+        "grade": "fail"
+      },
+      {
+        "student": "L5",
+        "target": "project",
+        "attempt_at": "2026-08-08",
+        "received_at": "2026-08-08",
+        "grade": "fail"
+      }
+    ],
+    "curriculum_map": [
+      {
+        "from": "2026-v1",
+        "to": "2026-v2",
+        "target": "project",
+        "compatible": "0"
+      },
+      {
+        "from": "2026-v2",
+        "to": "2026-v2",
+        "target": "project",
+        "compatible": "1"
+      }
+    ],
+    "contact_window": [
+      {
+        "student": "L1",
+        "from": "2026-08-14T10",
+        "to": "2026-08-14T12",
+        "skill": "math",
+        "consent": "1"
+      },
+      {
+        "student": "L2",
+        "from": "2026-08-12T10",
+        "to": "2026-08-12T12",
+        "skill": "writing",
+        "consent": "1"
+      },
+      {
+        "student": "L3",
+        "from": "2026-08-12T09",
+        "to": "2026-08-12T11",
+        "skill": "math",
+        "consent": "1"
+      },
+      {
+        "student": "L4",
+        "from": "2026-08-13T09",
+        "to": "2026-08-13T10",
+        "skill": "writing",
+        "consent": "0"
+      },
+      {
+        "student": "L5",
+        "from": "2026-08-12T10",
+        "to": "2026-08-12T12",
+        "skill": "math",
+        "consent": "1"
+      }
+    ],
+    "capacity": [
+      {
+        "slot": "2026-08-12T10",
+        "skill": "math",
+        "available_hours": "1"
+      },
+      {
+        "slot": "2026-08-12T10",
+        "skill": "writing",
+        "available_hours": "1"
+      },
+      {
+        "slot": "2026-08-12T11",
+        "skill": "math",
+        "available_hours": "1"
+      },
+      {
+        "slot": "2026-08-14T10",
+        "skill": "math",
+        "available_hours": "1"
+      }
+    ],
+    "case_cost": [
+      {
+        "skill": "math",
+        "hours": "1",
+        "sla": "2"
+      },
+      {
+        "skill": "writing",
+        "hours": "1",
+        "sla": "1"
+      }
+    ],
+    "booking": [
+      {
+        "id": "B1",
+        "student": "L3",
+        "slot": "2026-08-12T10",
+        "hours": "1",
+        "state": "open"
+      },
+      {
+        "id": "B2",
+        "student": "L5",
+        "slot": "2026-08-12T10",
+        "hours": "1",
+        "state": "confirmed"
+      }
+    ]
+  }
+}
